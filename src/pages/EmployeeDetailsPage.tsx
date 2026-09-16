@@ -61,6 +61,8 @@ export default function EmployeeDetailsPage() {
                 {DOCUMENT_TYPES.map((type) => (
                   <DocumentCard
                     key={type}
+                    employeeCode={employee.employeeCode}
+                    employeeName={employee.name}
                     documentType={type}
                     document={findDocument(type)}
                   />

@@ -14,6 +14,9 @@ function toEmployee(r: EmployeesRead): Employee {
 
 export async function getEmployees(): Promise<Employee[]> {
   const result = await EmployeesService.getAll();
+  if (!result.success) {
+    throw result.error ?? new Error("Failed to load employees");
+  }
   return (result.data ?? []).map(toEmployee);
 }
 

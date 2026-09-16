@@ -5,9 +5,11 @@
 
 // Models
 export * as CommonModels from './models/CommonModels';
+export * as EmployeeDocumentActionModel from './models/EmployeeDocumentActionModel';
 export * as EmployeeDocumentsModel from './models/EmployeeDocumentsModel';
 export * as EmployeesModel from './models/EmployeesModel';
 
 // Services
+export * from './services/EmployeeDocumentActionService';
 export * from './services/EmployeeDocumentsService';
 export * from './services/EmployeesService';

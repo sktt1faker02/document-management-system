@@ -5,14 +5,54 @@
  */
 
 export const dataSourcesInfo = {
-  "employee documents": {
+  "employeedocumentaction": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "",
+    "dataSourceType": "Connector",
+    "apis": {
+      "Run": {
+        "path": "/{connectionId}/triggers/manual/run",
+        "method": "POST",
+        "parameters": [
+          {
+            "name": "connectionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "input",
+            "in": "body",
+            "required": true,
+            "type": "object"
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responseInfo": {
+          "200": {
+            "type": "object"
+          },
+          "default": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  },
+  "employeedocuments": {
     "tableId": "b0964061-af7c-4487-b5f9-28af8c8779b8",
     "version": "",
     "primaryKey": "ID",
     "dataSourceType": "Connector",
     "apis": {
       "GetEditor": {
-        "path": "/{connectionId}/datasets/{dataset}/tables/b0964061af7c4487b5f928af8c8779b8/entities/Editor",
+        "path": "/{connectionId}/datasets/{dataset}/tables/{tableName}/entities/Editor",
         "method": "GET",
         "parameters": [
           {
@@ -28,7 +68,7 @@ export const dataSourcesInfo = {
             "type": "string"
           },
           {
-            "name": "table",
+            "name": "tableName",
             "in": "path",
             "required": true,
             "type": "string"
@@ -47,7 +87,7 @@ export const dataSourcesInfo = {
         }
       },
       "GetDocumentType": {
-        "path": "/{connectionId}/datasets/{dataset}/tables/b0964061af7c4487b5f928af8c8779b8/entities/DocumentType",
+        "path": "/{connectionId}/datasets/{dataset}/tables/{tableName}/entities/DocumentType",
         "method": "GET",
         "parameters": [
           {
@@ -63,7 +103,7 @@ export const dataSourcesInfo = {
             "type": "string"
           },
           {
-            "name": "table",
+            "name": "tableName",
             "in": "path",
             "required": true,
             "type": "string"
@@ -82,7 +122,7 @@ export const dataSourcesInfo = {
         }
       },
       "GetAuthor": {
-        "path": "/{connectionId}/datasets/{dataset}/tables/b0964061af7c4487b5f928af8c8779b8/entities/Author",
+        "path": "/{connectionId}/datasets/{dataset}/tables/{tableName}/entities/Author",
         "method": "GET",
         "parameters": [
           {
@@ -98,7 +138,7 @@ export const dataSourcesInfo = {
             "type": "string"
           },
           {
-            "name": "table",
+            "name": "tableName",
             "in": "path",
             "required": true,
             "type": "string"
@@ -117,7 +157,7 @@ export const dataSourcesInfo = {
         }
       },
       "GetCheckoutUser": {
-        "path": "/{connectionId}/datasets/{dataset}/tables/b0964061af7c4487b5f928af8c8779b8/entities/CheckoutUser",
+        "path": "/{connectionId}/datasets/{dataset}/tables/{tableName}/entities/CheckoutUser",
         "method": "GET",
         "parameters": [
           {
@@ -133,7 +173,7 @@ export const dataSourcesInfo = {
             "type": "string"
           },
           {
-            "name": "table",
+            "name": "tableName",
             "in": "path",
             "required": true,
             "type": "string"
@@ -152,7 +192,7 @@ export const dataSourcesInfo = {
         }
       },
       "Get4651e8f238c94ad08def41f743f76f30": {
-        "path": "/{connectionId}/datasets/{dataset}/tables/b0964061af7c4487b5f928af8c8779b8/entities/4651e8f238c94ad08def41f743f76f30",
+        "path": "/{connectionId}/datasets/{dataset}/tables/{tableName}/entities/4651e8f238c94ad08def41f743f76f30",
         "method": "GET",
         "parameters": [
           {
@@ -168,7 +208,7 @@ export const dataSourcesInfo = {
             "type": "string"
           },
           {
-            "name": "table",
+            "name": "tableName",
             "in": "path",
             "required": true,
             "type": "string"
@@ -195,7 +235,7 @@ export const dataSourcesInfo = {
     "dataSourceType": "Connector",
     "apis": {
       "GetAuthor": {
-        "path": "/{connectionId}/datasets/{dataset}/tables/a4b3cef8ab754602bd86f4b026111da3/entities/Author",
+        "path": "/{connectionId}/datasets/{dataset}/tables/{tableName}/entities/Author",
         "method": "GET",
         "parameters": [
           {
@@ -211,7 +251,7 @@ export const dataSourcesInfo = {
             "type": "string"
           },
           {
-            "name": "table",
+            "name": "tableName",
             "in": "path",
             "required": true,
             "type": "string"
@@ -230,7 +270,7 @@ export const dataSourcesInfo = {
         }
       },
       "GetEditor": {
-        "path": "/{connectionId}/datasets/{dataset}/tables/a4b3cef8ab754602bd86f4b026111da3/entities/Editor",
+        "path": "/{connectionId}/datasets/{dataset}/tables/{tableName}/entities/Editor",
         "method": "GET",
         "parameters": [
           {
@@ -246,7 +286,7 @@ export const dataSourcesInfo = {
             "type": "string"
           },
           {
-            "name": "table",
+            "name": "tableName",
             "in": "path",
             "required": true,
             "type": "string"
@@ -265,7 +305,7 @@ export const dataSourcesInfo = {
         }
       },
       "Get4651e8f238c94ad08def41f743f76f30": {
-        "path": "/{connectionId}/datasets/{dataset}/tables/a4b3cef8ab754602bd86f4b026111da3/entities/4651e8f238c94ad08def41f743f76f30",
+        "path": "/{connectionId}/datasets/{dataset}/tables/{tableName}/entities/4651e8f238c94ad08def41f743f76f30",
         "method": "GET",
         "parameters": [
           {
@@ -281,7 +321,7 @@ export const dataSourcesInfo = {
             "type": "string"
           },
           {
-            "name": "table",
+            "name": "tableName",
             "in": "path",
             "required": true,
             "type": "string"

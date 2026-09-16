@@ -270,22 +270,22 @@ Allow users to upload missing documents.
 
 ### Tasks
 
--   [ ] Determine the simplest supported document-upload implementation.
--   [ ] Add Power Automate flow integration if needed for file
+-   [x] Determine the simplest supported document-upload implementation.
+-   [x] Add Power Automate flow integration if needed for file
     operations.
--   [ ] Create the upload file picker.
--   [ ] Send:
+-   [x] Create the upload file picker.
+-   [x] Send:
     -   EmployeeCode
     -   EmployeeName
     -   DocumentType
     -   FileName
     -   File content
--   [ ] Create the file in `Employee Documents`.
--   [ ] Set SharePoint metadata.
--   [ ] Show an uploading state.
--   [ ] Disable repeated actions while uploading.
--   [ ] Handle failures with a user-friendly message.
--   [ ] Refresh document state after success.
+-   [x] Create the file in `Employee Documents`.
+-   [x] Set SharePoint metadata.
+-   [x] Show an uploading state.
+-   [x] Disable repeated actions while uploading.
+-   [x] Handle failures with a user-friendly message.
+-   [x] Refresh document state after success.
 
 ### Completion Check
 

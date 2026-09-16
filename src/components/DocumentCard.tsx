@@ -1,18 +1,62 @@
-import { FileText, Upload, Eye, Replace, Trash2 } from "lucide-react"
+import { useRef, type ChangeEvent } from "react"
+import { FileText, Upload, Eye, Replace, Trash2, Loader2 } from "lucide-react"
+import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
+import { useUploadDocument } from "@/hooks/useDocuments"
+import { fileToBase64 } from "@/lib/file"
 import type { DocumentType, EmployeeDocument } from "@/types/document"
 
+const ACCEPTED_FILES = ".pdf,.png,.jpg,.jpeg,.doc,.docx"
+
 type DocumentCardProps = {
+  employeeCode: string
+  employeeName: string
   documentType: DocumentType
   document?: EmployeeDocument
 }
 
-// Actions are intentionally disabled in Phase 4 — Upload lands in Phase 5,
-// View/Replace/Delete in Phase 6. This card only reflects document state.
-export function DocumentCard({ documentType, document }: DocumentCardProps) {
+// View/Replace/Delete remain disabled until Phase 6. Upload is wired to the
+// EmployeeDocumentAction flow via useUploadDocument.
+export function DocumentCard({
+  employeeCode,
+  employeeName,
+  documentType,
+  document,
+}: DocumentCardProps) {
+  const fileInputRef = useRef<HTMLInputElement>(null)
+  const upload = useUploadDocument(employeeCode)
+
+  const handleFileSelected = async (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    e.target.value = "" // allow re-selecting the same file later
+    if (!file) return
+    try {
+      const fileContentBase64 = await fileToBase64(file)
+      await upload.mutateAsync({
+        employeeCode,
+        employeeName,
+        documentType,
+        fileName: file.name,
+        fileContentBase64,
+      })
+      toast.success(`${documentType} uploaded`)
+    } catch (err) {
+      console.error("Document upload failed", err)
+      toast.error("Unable to upload the document. Please try again.")
+    }
+  }
+
   return (
     <div className="rounded-xl border border-fog bg-card p-6">
       <h3 className="text-lg font-semibold text-ink-black">{documentType}</h3>
+
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept={ACCEPTED_FILES}
+        className="hidden"
+        onChange={handleFileSelected}
+      />
 
       {document ? (
         <div className="mt-4 space-y-4">
@@ -51,10 +95,20 @@ export function DocumentCard({ documentType, document }: DocumentCardProps) {
           <Button
             size="sm"
             className="bg-brand-blue text-white hover:bg-deep-blue"
-            disabled
+            disabled={upload.isPending}
+            onClick={() => fileInputRef.current?.click()}
           >
-            <Upload className="h-4 w-4" />
-            Upload Document
+            {upload.isPending ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin" />
+                Uploading…
+              </>
+            ) : (
+              <>
+                <Upload className="h-4 w-4" />
+                Upload Document
+              </>
+            )}
           </Button>
         </div>
       )}

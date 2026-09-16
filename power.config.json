@@ -30,6 +30,21 @@
           }
         }
       }
+    },
+    "966d4502-9c3f-4715-932d-4cb1e02c8473": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_logicflows",
+      "displayName": "Logic flows",
+      "dataSources": [
+        "employeedocumentaction"
+      ],
+      "workflowDetails": {
+        "workflowEntityId": "28ca474f-8bb1-f111-aaad-70a8a503d03f",
+        "workflowDisplayName": "EmployeeDocumentAction",
+        "workflowName": "8f02a370-e4aa-283f-e071-d1831f8980c3",
+        "dependencies": {
+          "shared_sharepointonline": "bfd5cdc7-f698-4297-b838-bb14017cbd83"
+        }
+      }
     }
   },
   "databaseReferences": {}

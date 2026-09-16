@@ -11,7 +11,7 @@ import { getClient } from '@microsoft/power-apps/data';
 
 
 export class EmployeeDocumentsService {
-  private static readonly dataSourceName = 'employee documents';
+  private static readonly dataSourceName = 'employeedocuments';
 
   private static readonly client = getClient(dataSourcesInfo);
 
