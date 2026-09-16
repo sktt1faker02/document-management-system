@@ -117,15 +117,15 @@ Establish working data access between the Code App and SharePoint.
 
 ### Tasks
 
--   [ ] Configure the SharePoint connection for the Code App.
--   [ ] Add the `Employees` list as a data source.
--   [ ] Add/access the `Employee Documents` library as required by the
+-   [x] Configure the SharePoint connection for the Code App.
+-   [x] Add the `Employees` list as a data source.
+-   [x] Add/access the `Employee Documents` library as required by the
     chosen implementation.
--   [ ] Inspect generated TypeScript models/services.
--   [ ] Create a small application service layer rather than spreading
+-   [x] Inspect generated TypeScript models/services.
+-   [x] Create a small application service layer rather than spreading
     SharePoint calls throughout UI components.
--   [ ] Verify that the app can retrieve the five employees.
--   [ ] Verify that employee document metadata can be retrieved.
+-   [x] Verify that the app can retrieve the five employees.
+-   [x] Verify that employee document metadata can be retrieved.
 
 ### Suggested Application Services
 

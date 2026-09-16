@@ -10,6 +10,27 @@
   "buildEntryPoint": "index.html",
   "localAppUrl": "http://localhost:3000",
   "logoPath": "Default",
-  "connectionReferences": {},
+  "connectionReferences": {
+    "bfd5cdc7-f698-4297-b838-bb14017cbd83": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+      "displayName": "SharePoint",
+      "dataSources": [
+        "employees",
+        "employeedocuments"
+      ],
+      "dataSets": {
+        "https://automations365.sharepoint.com/sites/WebsiteSEODevelopment": {
+          "dataSources": {
+            "employees": {
+              "tableName": "a4b3cef8-ab75-4602-bd86-f4b026111da3"
+            },
+            "employeedocuments": {
+              "tableName": "b0964061-af7c-4487-b5f9-28af8c8779b8"
+            }
+          }
+        }
+      }
+    }
+  },
   "databaseReferences": {}
 }
