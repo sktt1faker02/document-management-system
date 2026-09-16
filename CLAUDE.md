@@ -22,6 +22,9 @@ Do not overengineer this application.
 
 Use this pre installed starter template wherever needed
 
+Reference: https://learn.microsoft.com/en-us/power-apps/developer/code-apps/overview
+https://github.com/microsoft/PowerAppsCodeApps/tree/main/templates/starter
+
 - Power Apps Code Apps
 - React
 - TypeScript
@@ -574,6 +577,11 @@ Adapt these interfaces to the actual generated SharePoint/Power Platform types w
 # General Development Rules
 
 - use vercel-react-best-practices skill for any related react code
+
+# Design System
+
+- use the design system in DESIGN.md
+- use this logo wherever needed public\automations365-logo.webp
 
 # Development Principles
 
