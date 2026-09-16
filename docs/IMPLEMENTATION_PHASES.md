@@ -209,16 +209,16 @@ Build the main DMS experience before implementing document mutations.
 
 ### Tasks
 
--   [ ] Create `EmployeeDetailsPage`.
--   [ ] Retrieve the selected employee using `EmployeeCode`.
--   [ ] Display employee information.
--   [ ] Retrieve that employee's documents.
--   [ ] Create reusable `DocumentCard`.
--   [ ] Render exactly two document sections:
+-   [x] Create `EmployeeDetailsPage`.
+-   [x] Retrieve the selected employee using `EmployeeCode`.
+-   [x] Display employee information.
+-   [x] Retrieve that employee's documents.
+-   [x] Create reusable `DocumentCard`.
+-   [x] Render exactly two document sections:
     -   Birth Certificate
     -   Certificate of Employment
--   [ ] Determine whether each document exists.
--   [ ] Implement empty and uploaded states.
+-   [x] Determine whether each document exists.
+-   [x] Implement empty and uploaded states.
 
 ### Empty State
 
