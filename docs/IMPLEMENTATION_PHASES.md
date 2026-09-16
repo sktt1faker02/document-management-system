@@ -154,19 +154,19 @@ Build the home page for selecting an employee.
 
 ### Tasks
 
--   [ ] Create `EmployeesPage`.
--   [ ] Create reusable `EmployeeTable`.
--   [ ] Load employees from SharePoint.
--   [ ] Add loading state.
--   [ ] Add basic error state.
--   [ ] Display:
+-   [x] Create `EmployeesPage`.
+-   [x] Create reusable `EmployeeTable`.
+-   [x] Load employees from SharePoint.
+-   [x] Add loading state.
+-   [x] Add basic error state.
+-   [x] Display:
     -   Employee Code
     -   Employee Name
     -   Job Title
     -   Department
     -   Action
--   [ ] Add a `View` action or clickable table row.
--   [ ] Navigate to the selected employee.
+-   [x] Add a `View` action or clickable table row.
+-   [x] Navigate to the selected employee.
 
 Suggested route:
 

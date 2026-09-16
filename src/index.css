@@ -118,14 +118,59 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* Automations 365 HR DMS brand — overrides the default shadcn light palette.
+   See DESIGN.md > Application Semantic Colors / Component Overrides. */
+:root {
+  --background: #f7f9ff; /* Cloud Blue app surface */
+  --foreground: #111827; /* Ink Black */
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --popover: #ffffff;
+  --popover-foreground: #111827;
+  --primary: #1747d1; /* Brand Blue */
+  --primary-foreground: #ffffff;
+  --secondary: #eef3ff; /* Periwinkle Surface */
+  --secondary-foreground: #12359b;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b; /* Iron */
+  --accent: #eef3ff;
+  --accent-foreground: #12359b;
+  --destructive: #dc2626; /* Danger */
+  --border: #e2e8f0; /* Fog */
+  --input: #cbd5e1;
+  --ring: #2563eb; /* Action Blue */
+}
+
+/* Brand utilities (bg-brand-blue, text-brand-blue, bg-cloud-blue, ...) */
+@theme {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --color-brand-blue: #1747d1;
+  --color-action-blue: #2563eb;
+  --color-deep-blue: #12359b;
+  --color-cloud-blue: #f7f9ff;
+  --color-periwinkle-surface: #eef3ff;
+  --color-blue-border: #d8e3ff;
+  --color-fog: #e2e8f0;
+  --color-ink-black: #111827;
+  --color-graphite: #334155;
+  --color-iron: #64748b;
+  --color-success: #16a34a;
+  --color-success-surface: #f0fdf4;
+  --color-warning: #d97706;
+  --color-warning-surface: #fffbeb;
+  --color-danger: #dc2626;
+  --color-danger-surface: #fef2f2;
+}
+
 @layer base {
-  html, body, #root { 
-    height: 100%; 
+  html, body, #root {
+    height: 100%;
   }
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 }
