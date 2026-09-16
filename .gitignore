@@ -38,3 +38,6 @@ Thumbs.db
 .powerplatform/
 .auth/
 .token/
+
+# Power Automate flow tooling (local backups/cache)
+.flowagent/

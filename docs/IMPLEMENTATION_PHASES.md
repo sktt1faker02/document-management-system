@@ -117,15 +117,15 @@ Establish working data access between the Code App and SharePoint.
 
 ### Tasks
 
--   [ ] Configure the SharePoint connection for the Code App.
--   [ ] Add the `Employees` list as a data source.
--   [ ] Add/access the `Employee Documents` library as required by the
+-   [x] Configure the SharePoint connection for the Code App.
+-   [x] Add the `Employees` list as a data source.
+-   [x] Add/access the `Employee Documents` library as required by the
     chosen implementation.
--   [ ] Inspect generated TypeScript models/services.
--   [ ] Create a small application service layer rather than spreading
+-   [x] Inspect generated TypeScript models/services.
+-   [x] Create a small application service layer rather than spreading
     SharePoint calls throughout UI components.
--   [ ] Verify that the app can retrieve the five employees.
--   [ ] Verify that employee document metadata can be retrieved.
+-   [x] Verify that the app can retrieve the five employees.
+-   [x] Verify that employee document metadata can be retrieved.
 
 ### Suggested Application Services
 
@@ -154,19 +154,19 @@ Build the home page for selecting an employee.
 
 ### Tasks
 
--   [ ] Create `EmployeesPage`.
--   [ ] Create reusable `EmployeeTable`.
--   [ ] Load employees from SharePoint.
--   [ ] Add loading state.
--   [ ] Add basic error state.
--   [ ] Display:
+-   [x] Create `EmployeesPage`.
+-   [x] Create reusable `EmployeeTable`.
+-   [x] Load employees from SharePoint.
+-   [x] Add loading state.
+-   [x] Add basic error state.
+-   [x] Display:
     -   Employee Code
     -   Employee Name
     -   Job Title
     -   Department
     -   Action
--   [ ] Add a `View` action or clickable table row.
--   [ ] Navigate to the selected employee.
+-   [x] Add a `View` action or clickable table row.
+-   [x] Navigate to the selected employee.
 
 Suggested route:
 
@@ -209,16 +209,16 @@ Build the main DMS experience before implementing document mutations.
 
 ### Tasks
 
--   [ ] Create `EmployeeDetailsPage`.
--   [ ] Retrieve the selected employee using `EmployeeCode`.
--   [ ] Display employee information.
--   [ ] Retrieve that employee's documents.
--   [ ] Create reusable `DocumentCard`.
--   [ ] Render exactly two document sections:
+-   [x] Create `EmployeeDetailsPage`.
+-   [x] Retrieve the selected employee using `EmployeeCode`.
+-   [x] Display employee information.
+-   [x] Retrieve that employee's documents.
+-   [x] Create reusable `DocumentCard`.
+-   [x] Render exactly two document sections:
     -   Birth Certificate
     -   Certificate of Employment
--   [ ] Determine whether each document exists.
--   [ ] Implement empty and uploaded states.
+-   [x] Determine whether each document exists.
+-   [x] Implement empty and uploaded states.
 
 ### Empty State
 
@@ -270,22 +270,22 @@ Allow users to upload missing documents.
 
 ### Tasks
 
--   [ ] Determine the simplest supported document-upload implementation.
--   [ ] Add Power Automate flow integration if needed for file
+-   [x] Determine the simplest supported document-upload implementation.
+-   [x] Add Power Automate flow integration if needed for file
     operations.
--   [ ] Create the upload file picker.
--   [ ] Send:
+-   [x] Create the upload file picker.
+-   [x] Send:
     -   EmployeeCode
     -   EmployeeName
     -   DocumentType
     -   FileName
     -   File content
--   [ ] Create the file in `Employee Documents`.
--   [ ] Set SharePoint metadata.
--   [ ] Show an uploading state.
--   [ ] Disable repeated actions while uploading.
--   [ ] Handle failures with a user-friendly message.
--   [ ] Refresh document state after success.
+-   [x] Create the file in `Employee Documents`.
+-   [x] Set SharePoint metadata.
+-   [x] Show an uploading state.
+-   [x] Disable repeated actions while uploading.
+-   [x] Handle failures with a user-friendly message.
+-   [x] Refresh document state after success.
 
 ### Completion Check
 
@@ -302,27 +302,27 @@ Complete the required document-management actions.
 
 ### 6.1 View
 
--   [ ] Obtain the SharePoint document URL.
--   [ ] Add `View`.
--   [ ] Open the SharePoint document in a new browser tab.
+-   [x] Obtain the SharePoint document URL.
+-   [x] Add `View`.
+-   [x] Open the SharePoint document in a new browser tab.
 
 Do not build a custom document viewer.
 
 ### 6.2 Replace
 
--   [ ] Add `Replace`.
--   [ ] Allow selection of a new file.
--   [ ] Replace the existing document.
--   [ ] Preserve employee/document metadata.
--   [ ] Refresh the card after completion.
+-   [x] Add `Replace`.
+-   [x] Allow selection of a new file.
+-   [x] Replace the existing document.
+-   [x] Preserve employee/document metadata.
+-   [x] Refresh the card after completion.
 
 ### 6.3 Delete
 
--   [ ] Add `Delete`.
--   [ ] Add a confirmation dialog.
--   [ ] Delete the correct SharePoint document.
--   [ ] Refresh document state.
--   [ ] Return the card to the empty state.
+-   [x] Add `Delete`.
+-   [x] Add a confirmation dialog.
+-   [x] Delete the correct SharePoint document.
+-   [x] Refresh document state.
+-   [x] Return the card to the empty state.
 
 ### Completion Check
 
@@ -355,16 +355,16 @@ features.
 
 ### Tasks
 
--   [ ] Apply consistent spacing and typography.
--   [ ] Make the Employee Table responsive.
--   [ ] Polish document cards.
--   [ ] Add appropriate document/file icons.
--   [ ] Add loading indicators.
--   [ ] Add empty states.
--   [ ] Add success/error feedback.
--   [ ] Add disabled states during operations.
--   [ ] Verify keyboard/accessibility basics.
--   [ ] Ensure the UI looks like a modern enterprise application.
+-   [x] Apply consistent spacing and typography.
+-   [x] Make the Employee Table responsive.
+-   [x] Polish document cards.
+-   [x] Add appropriate document/file icons.
+-   [x] Add loading indicators.
+-   [x] Add empty states.
+-   [x] Add success/error feedback.
+-   [x] Add disabled states during operations.
+-   [x] Verify keyboard/accessibility basics.
+-   [x] Ensure the UI looks like a modern enterprise application.
 
 ### Avoid
 

@@ -10,6 +10,42 @@
   "buildEntryPoint": "index.html",
   "localAppUrl": "http://localhost:3000",
   "logoPath": "Default",
-  "connectionReferences": {},
+  "connectionReferences": {
+    "bfd5cdc7-f698-4297-b838-bb14017cbd83": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+      "displayName": "SharePoint",
+      "dataSources": [
+        "employees",
+        "employeedocuments"
+      ],
+      "dataSets": {
+        "https://automations365.sharepoint.com/sites/WebsiteSEODevelopment": {
+          "dataSources": {
+            "employees": {
+              "tableName": "a4b3cef8-ab75-4602-bd86-f4b026111da3"
+            },
+            "employeedocuments": {
+              "tableName": "b0964061-af7c-4487-b5f9-28af8c8779b8"
+            }
+          }
+        }
+      }
+    },
+    "966d4502-9c3f-4715-932d-4cb1e02c8473": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_logicflows",
+      "displayName": "Logic flows",
+      "dataSources": [
+        "employeedocumentaction"
+      ],
+      "workflowDetails": {
+        "workflowEntityId": "28ca474f-8bb1-f111-aaad-70a8a503d03f",
+        "workflowDisplayName": "EmployeeDocumentAction",
+        "workflowName": "8f02a370-e4aa-283f-e071-d1831f8980c3",
+        "dependencies": {
+          "shared_sharepointonline": "bfd5cdc7-f698-4297-b838-bb14017cbd83"
+        }
+      }
+    }
+  },
   "databaseReferences": {}
 }
