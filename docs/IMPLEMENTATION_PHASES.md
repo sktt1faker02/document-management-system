@@ -302,27 +302,27 @@ Complete the required document-management actions.
 
 ### 6.1 View
 
--   [ ] Obtain the SharePoint document URL.
--   [ ] Add `View`.
--   [ ] Open the SharePoint document in a new browser tab.
+-   [x] Obtain the SharePoint document URL.
+-   [x] Add `View`.
+-   [x] Open the SharePoint document in a new browser tab.
 
 Do not build a custom document viewer.
 
 ### 6.2 Replace
 
--   [ ] Add `Replace`.
--   [ ] Allow selection of a new file.
--   [ ] Replace the existing document.
--   [ ] Preserve employee/document metadata.
--   [ ] Refresh the card after completion.
+-   [x] Add `Replace`.
+-   [x] Allow selection of a new file.
+-   [x] Replace the existing document.
+-   [x] Preserve employee/document metadata.
+-   [x] Refresh the card after completion.
 
 ### 6.3 Delete
 
--   [ ] Add `Delete`.
--   [ ] Add a confirmation dialog.
--   [ ] Delete the correct SharePoint document.
--   [ ] Refresh document state.
--   [ ] Return the card to the empty state.
+-   [x] Add `Delete`.
+-   [x] Add a confirmation dialog.
+-   [x] Delete the correct SharePoint document.
+-   [x] Refresh document state.
+-   [x] Return the card to the empty state.
 
 ### Completion Check
 
