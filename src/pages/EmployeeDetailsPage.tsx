@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react"
 import { useEmployee } from "@/hooks/useEmployees"
 import { useEmployeeDocuments } from "@/hooks/useDocuments"
 import { DocumentCard } from "@/components/DocumentCard"
+import { EmployeeAvatar } from "@/components/EmployeeAvatar"
 import { Skeleton } from "@/components/ui/skeleton"
 import { DOCUMENT_TYPES } from "@/types/document"
 
@@ -18,58 +19,61 @@ export default function EmployeeDetailsPage() {
   const findDocument = (type: (typeof DOCUMENT_TYPES)[number]) =>
     documents?.find((d) => d.documentType === type)
 
+  const metaLine = employee
+    ? [employee.employeeCode, employee.jobTitle, employee.department]
+        .filter(Boolean)
+        .join("  •  ")
+    : ""
+
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <Link
         to="/"
-        className="inline-flex items-center gap-1 text-sm text-brand-blue hover:text-deep-blue"
+        className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-blue hover:text-deep-blue"
       >
         <ArrowLeft className="h-4 w-4" />
-        Employees
+        Back to Employees
       </Link>
 
       {isLoading ? (
-        <div className="space-y-2">
-          <Skeleton className="h-9 w-64" />
-          <Skeleton className="h-4 w-40" />
-        </div>
+        <Skeleton className="h-28 w-full rounded-xl" />
       ) : isError || !employee ? (
         <p className="text-iron">Employee not found.</p>
       ) : (
         <>
+          <div className="flex items-center gap-4 rounded-xl border border-fog bg-periwinkle-surface p-6">
+            <EmployeeAvatar name={employee.name} seed={employee.employeeCode} size="lg" />
+            <div>
+              <h1 className="text-2xl font-semibold text-ink-black">{employee.name}</h1>
+              <p className="mt-0.5 text-sm text-graphite">{metaLine}</p>
+            </div>
+          </div>
+
           <div>
-            <h1 className="text-3xl font-semibold text-ink-black">{employee.name}</h1>
-            <p className="text-iron mt-1">{employee.jobTitle ?? "—"}</p>
-            <p className="text-iron">{employee.department ?? "—"}</p>
-            <p className="text-iron">{employee.employeeCode}</p>
-          </div>
-
-          <div className="space-y-4">
             <h2 className="text-xl font-semibold text-ink-black">Documents</h2>
-
-            {docsLoading ? (
-              <div className="grid gap-4 sm:grid-cols-2">
-                <Skeleton className="h-40 w-full rounded-xl" />
-                <Skeleton className="h-40 w-full rounded-xl" />
-              </div>
-            ) : docsError ? (
-              <div className="rounded-xl border border-fog bg-card p-8 text-center text-iron">
-                Unable to load documents. Please try again.
-              </div>
-            ) : (
-              <div className="grid gap-4 sm:grid-cols-2">
-                {DOCUMENT_TYPES.map((type) => (
-                  <DocumentCard
-                    key={type}
-                    employeeCode={employee.employeeCode}
-                    employeeName={employee.name}
-                    documentType={type}
-                    document={findDocument(type)}
-                  />
-                ))}
-              </div>
-            )}
+            <p className="mt-1 text-sm text-iron">
+              Manage required documents for this employee.
+            </p>
           </div>
+
+          {docsError ? (
+            <div className="rounded-xl border border-fog bg-card p-8 text-center text-iron">
+              Unable to load documents. Please try again.
+            </div>
+          ) : (
+            <div className="space-y-4">
+              {DOCUMENT_TYPES.map((type) => (
+                <DocumentCard
+                  key={type}
+                  employeeCode={employee.employeeCode}
+                  employeeName={employee.name}
+                  documentType={type}
+                  document={findDocument(type)}
+                  loading={docsLoading}
+                />
+              ))}
+            </div>
+          )}
         </>
       )}
     </div>

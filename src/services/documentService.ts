@@ -11,7 +11,7 @@ function toDocument(r: EmployeeDocumentsRead): EmployeeDocument {
     documentType: r.DocumentType?.Value as DocumentType,
     fileName: r["{FilenameWithExtension}"] ?? r["{Name}"] ?? "",
     documentUrl: r["{Link}"] ?? "",
-    identifier: r["{Identifier}"],
+    uploadedDate: r.Created,
   };
 }
 

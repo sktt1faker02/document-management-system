@@ -12,6 +12,6 @@ export interface EmployeeDocument {
   documentType: DocumentType;
   fileName: string;
   documentUrl: string;
-  /** SharePoint item identifier, used later for replace/delete via Power Automate. */
-  identifier?: string;
+  /** ISO date the file was created in SharePoint. */
+  uploadedDate?: string;
 }

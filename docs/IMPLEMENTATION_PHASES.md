@@ -355,16 +355,16 @@ features.
 
 ### Tasks
 
--   [ ] Apply consistent spacing and typography.
--   [ ] Make the Employee Table responsive.
--   [ ] Polish document cards.
--   [ ] Add appropriate document/file icons.
--   [ ] Add loading indicators.
--   [ ] Add empty states.
--   [ ] Add success/error feedback.
--   [ ] Add disabled states during operations.
--   [ ] Verify keyboard/accessibility basics.
--   [ ] Ensure the UI looks like a modern enterprise application.
+-   [x] Apply consistent spacing and typography.
+-   [x] Make the Employee Table responsive.
+-   [x] Polish document cards.
+-   [x] Add appropriate document/file icons.
+-   [x] Add loading indicators.
+-   [x] Add empty states.
+-   [x] Add success/error feedback.
+-   [x] Add disabled states during operations.
+-   [x] Verify keyboard/accessibility basics.
+-   [x] Ensure the UI looks like a modern enterprise application.
 
 ### Avoid
 
